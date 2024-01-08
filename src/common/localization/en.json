@@ -1,0 +1,8 @@
+{
+  "COMPONENTS": {
+    "CTA": {
+      "CHANGE_THEME": "Change Theme",
+      "CHANGE_LANGUAGE": "Change Language"
+    }
+  }
+}

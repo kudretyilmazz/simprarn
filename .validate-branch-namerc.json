@@ -1,0 +1,4 @@
+{
+  "pattern": "^(feature|refactor|fix|hotfix|release)/.+",
+  "errorMsg": "The branch name does not comply with the rules."
+}
