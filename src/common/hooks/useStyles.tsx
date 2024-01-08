@@ -5,7 +5,7 @@ import type {StyleProp} from 'react-native';
 import {useAppSelector} from '@store/hooks';
 
 // Import Design
-import {colors} from '@common/themes/colors';
+import {colors} from '@common/design/colors';
 
 // Import Constants
 import {THEMES} from '@common/constants/theme/themes';
