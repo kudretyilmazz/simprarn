@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "pod-install": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
+    "android:clean": "cd android && ./gradlew clean && cd ..",
+    "pod:clean": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
     "prepare": "husky install"
   },
   "dependencies": {
