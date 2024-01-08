@@ -1,3 +1,6 @@
+// Import React Navigation
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+
 // Import Store
 import {setTheme} from '@store/slices/theme';
 import {useAppDispatch, useAppSelector} from '@store/hooks';
@@ -5,6 +8,7 @@ import {useAppDispatch, useAppSelector} from '@store/hooks';
 // Import Components
 import View from '@components/view/View';
 import Button from '@components/button/Button';
+import ScreenWrapper from '@components/screen-wrapper/ScreenWrapper';
 
 // Import Hooks
 import useLocalization from '@common/hooks/useLocalization';
@@ -17,7 +21,9 @@ import {THEMES} from '@common/constants/theme/themes';
 // Import Assets
 import homeStyles from '@assets/styles/screens/home/homeStyles';
 
-// Import i18n
+// Navigator Types
+import {RootStackParamList} from '../index';
+type TypeNavigation = NavigationProp<RootStackParamList>;
 
 export default function HomeScreen() {
   // Variables
@@ -25,6 +31,7 @@ export default function HomeScreen() {
   const currentTheme = useAppSelector(store => store.theme.theme);
   const dispatch = useAppDispatch();
   const {changeLanguage, locale} = useLocalization();
+  const {navigate} = useNavigation<TypeNavigation>();
 
   // Functions
   const changeTheme = () => {
@@ -36,10 +43,15 @@ export default function HomeScreen() {
   const changeLang = () =>
     changeLanguage(locale === LOCALES.TR ? LOCALES.EN : LOCALES.TR);
 
+  const pushSettings = () => navigate('Profile');
+
   return (
-    <View style={styles.container}>
-      <Button label="COMPONENTS.CTA.CHANGE_THEME" onPress={changeTheme} />
-      <Button label="COMPONENTS.CTA.CHANGE_LANGUAGE" onPress={changeLang} />
-    </View>
+    <ScreenWrapper>
+      <View style={styles.container}>
+        <Button label="COMPONENTS.CTA.CHANGE_THEME" onPress={changeTheme} />
+        <Button label="COMPONENTS.CTA.CHANGE_LANGUAGE" onPress={changeLang} />
+        <Button label="COMPONENTS.CTA.PROFILE" onPress={pushSettings} />
+      </View>
+    </ScreenWrapper>
   );
 }

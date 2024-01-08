@@ -10,9 +10,9 @@ const screenWrapperStyles = ({}: IStyleFileProp) =>
       flex: 1,
     },
     container: {
+      flex: 1,
       paddingHorizontal: 16,
       paddingVertical: 16,
-      flex: 1,
     },
   });
 

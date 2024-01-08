@@ -2,7 +2,8 @@
   "COMPONENTS": {
     "CTA": {
       "CHANGE_THEME": "Temayı Değiştir",
-      "CHANGE_LANGUAGE": "Dili Değiştir"
+      "CHANGE_LANGUAGE": "Dili Değiştir",
+      "PROFILE": "Profilim"
     }
   }
 }

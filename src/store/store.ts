@@ -17,11 +17,13 @@ import {reduxStorage} from '@storage/storage';
 // Import Reducers
 import theme from './slices/theme';
 import localization from './slices/localization';
+import user from './slices/user';
 
 // Reducers
 const rootReducer = combineReducers({
   theme: theme,
   localization: localization,
+  user: user,
 });
 
 // Persist Config
