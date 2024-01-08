@@ -1,6 +1,12 @@
 // Import React
 import {Keyboard, TouchableWithoutFeedback, ViewProps} from 'react-native';
 
+// Import Safe Context
+import {
+  SafeAreaProvider,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
+
 // Import Hooks
 import useStyles from '@common/hooks/useStyles';
 
@@ -12,27 +18,49 @@ import screenWrapperStyles from '@assets/styles/components/screen-wrapper/screen
 
 interface IScreenWrapper extends ViewProps {
   withoutPadding?: boolean;
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
 }
 
 function ScreenWrapper(props: IScreenWrapper) {
   // Props Destruction
-  const {children, withoutPadding, style} = props;
+  const {
+    children,
+    withoutPadding,
+    style,
+    paddingTop,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
+  } = props;
 
   // Variables
   const styles = useStyles(screenWrapperStyles);
+  const insets = useSafeAreaInsets();
   const withoutPaddingStyle = {paddingHorizontal: 0, paddingVertical: 0};
 
   return (
     <KeyboardShift>
-      <TouchableWithoutFeedback
-        onPress={Keyboard.dismiss}
-        style={[
-          styles.container,
-          withoutPadding && withoutPaddingStyle,
-          style && style,
-        ]}>
-        {children}
-      </TouchableWithoutFeedback>
+      <SafeAreaProvider
+        style={{
+          ...styles.safeArea,
+          paddingTop: paddingTop ?? insets.top,
+          paddingBottom: paddingBottom ?? insets.bottom,
+          paddingLeft: paddingLeft ?? insets.left,
+          paddingRight: paddingRight ?? insets.right,
+        }}>
+        <TouchableWithoutFeedback
+          onPress={Keyboard.dismiss}
+          style={[
+            styles.container,
+            withoutPadding && withoutPaddingStyle,
+            style && style,
+          ]}>
+          {children}
+        </TouchableWithoutFeedback>
+      </SafeAreaProvider>
     </KeyboardShift>
   );
 }

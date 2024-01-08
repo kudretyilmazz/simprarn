@@ -6,6 +6,9 @@ import type {IStyleFileProp} from '@common/hooks/useStyles';
 
 const screenWrapperStyles = ({}: IStyleFileProp) =>
   StyleSheet.create({
+    safeArea: {
+      flex: 1,
+    },
     container: {
       paddingHorizontal: 16,
       paddingVertical: 16,
