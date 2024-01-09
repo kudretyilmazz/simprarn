@@ -2,8 +2,9 @@
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 
 // Import Store
-import {setTheme} from '@store/slices/theme';
 import {useAppDispatch, useAppSelector} from '@store/hooks';
+import {setTheme} from '@store/slices/theme';
+import {setLoginStatus} from '@store/slices/user';
 
 // Import Components
 import View from '@components/view/View';
@@ -31,7 +32,7 @@ export default function HomeScreen() {
   const currentTheme = useAppSelector(store => store.theme.theme);
   const dispatch = useAppDispatch();
   const {changeLanguage, locale} = useLocalization();
-  const {navigate} = useNavigation<TypeNavigation>();
+  const navigation = useNavigation<TypeNavigation>();
 
   // Functions
   const changeTheme = () => {
@@ -43,7 +44,9 @@ export default function HomeScreen() {
   const changeLang = () =>
     changeLanguage(locale === LOCALES.TR ? LOCALES.EN : LOCALES.TR);
 
-  const pushSettings = () => navigate('Profile');
+  const pushSettings = () => navigation.navigate('Profile');
+
+  const logout = () => dispatch(setLoginStatus(false));
 
   return (
     <ScreenWrapper>
@@ -51,6 +54,7 @@ export default function HomeScreen() {
         <Button label="COMPONENTS.CTA.CHANGE_THEME" onPress={changeTheme} />
         <Button label="COMPONENTS.CTA.CHANGE_LANGUAGE" onPress={changeLang} />
         <Button label="COMPONENTS.CTA.PROFILE" onPress={pushSettings} />
+        <Button label="COMPONENTS.CTA.LOGOUT" onPress={logout} />
       </View>
     </ScreenWrapper>
   );

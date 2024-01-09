@@ -3,7 +3,10 @@
     "CTA": {
       "CHANGE_THEME": "Change Theme",
       "CHANGE_LANGUAGE": "Change Language",
-      "PROFILE": "Profile"
+      "PROFILE": "Profile",
+      "LOGIN": "Login",
+      "LOGOUT": "Logout",
+      "GO_BACK": "Go Back"
     }
   }
 }

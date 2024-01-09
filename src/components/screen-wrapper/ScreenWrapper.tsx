@@ -12,6 +12,7 @@ import useStyles from '@common/hooks/useStyles';
 
 // Import Components
 import KeyboardShift from '@components/keyboard-shift/KeyboardShift';
+import View from '@components/view/View';
 
 // Import Assets
 import screenWrapperStyles from '@assets/styles/components/screen-wrapper/screenWrapperStyles';
@@ -45,20 +46,23 @@ function ScreenWrapper(props: IScreenWrapper) {
     <KeyboardShift>
       <SafeAreaProvider
         style={{
-          ...styles.safeArea,
+          ...styles.flex,
           paddingTop: paddingTop ?? insets.top,
           paddingBottom: paddingBottom ?? insets.bottom,
           paddingLeft: paddingLeft ?? insets.left,
           paddingRight: paddingRight ?? insets.right,
         }}>
         <TouchableWithoutFeedback
-          onPress={Keyboard.dismiss}
-          style={[
-            styles.container,
-            withoutPadding && withoutPaddingStyle,
-            style && style,
-          ]}>
-          {children}
+          style={styles.flex}
+          onPress={Keyboard.dismiss}>
+          <View
+            style={[
+              styles.container,
+              withoutPadding && withoutPaddingStyle,
+              style && style,
+            ]}>
+            {children}
+          </View>
         </TouchableWithoutFeedback>
       </SafeAreaProvider>
     </KeyboardShift>

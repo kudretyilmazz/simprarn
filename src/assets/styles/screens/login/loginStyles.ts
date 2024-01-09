@@ -4,16 +4,14 @@ import {StyleSheet} from 'react-native';
 // Import Theme Type
 import type {IStyleFileProp} from '@common/hooks/useStyles';
 
-const screenWrapperStyles = ({}: IStyleFileProp) =>
+const loginStyles = ({}: IStyleFileProp) =>
   StyleSheet.create({
-    flex: {
-      flex: 1,
-    },
     container: {
       flex: 1,
-      paddingHorizontal: 16,
-      paddingVertical: 16,
+      alignItems: 'center',
+      justifyContent: 'center',
+      rowGap: 16,
     },
   });
 
-export default screenWrapperStyles;
+export default loginStyles;

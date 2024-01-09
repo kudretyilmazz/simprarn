@@ -6,12 +6,13 @@ import {useAppSelector} from '@store/hooks';
 
 // Import Design
 import {colors} from '@common/design/colors';
+import type {TypeColors} from '@common/design/colors';
 
 // Import Constants
 import {THEMES} from '@common/constants/theme/themes';
 
 export interface IStyleFileProp {
-  colors: Record<string, string>;
+  colors: Record<TypeColors, string>;
   theme: THEMES;
 }
 

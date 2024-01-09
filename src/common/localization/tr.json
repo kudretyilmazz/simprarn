@@ -3,7 +3,10 @@
     "CTA": {
       "CHANGE_THEME": "Temayı Değiştir",
       "CHANGE_LANGUAGE": "Dili Değiştir",
-      "PROFILE": "Profilim"
+      "PROFILE": "Profilim",
+      "LOGIN": "Giriş",
+      "LOGOUT": "Çıkış",
+      "GO_BACK": "Geri Dön"
     }
   }
 }
