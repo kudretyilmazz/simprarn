@@ -1,4 +1,4 @@
 {
-  "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|release)/.+$",
+  "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|refactor|release)/.+$",
   "errorMsg": "The branch name does not comply with the rules."
 }

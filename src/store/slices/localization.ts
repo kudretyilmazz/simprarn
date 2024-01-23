@@ -6,7 +6,7 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 import {findBestLanguageTag} from 'react-native-localize';
 
 // Import Constants
-import {LOCALES} from '@common/constants/localization/locales';
+import {LOCALES} from 'src/app/common/constants/localization/locales';
 
 // Initial Locale
 const initialLocale: LOCALES =

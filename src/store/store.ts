@@ -12,7 +12,7 @@ import {
 } from 'redux-persist';
 
 // Import Storage
-import {reduxStorage} from '@storage/storage';
+import {reduxStorage} from '@store/reduxStorage';
 
 // Import Reducers
 import theme from './slices/theme';

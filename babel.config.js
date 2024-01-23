@@ -2,6 +2,16 @@ module.exports = {
   presets: ['module:@react-native/babel-preset'],
   plugins: [
     [
+      'module:react-native-dotenv',
+      {
+        envName: 'APP_ENV',
+        moduleName: '@env',
+        path: '.env',
+        safe: true,
+        allowUndefined: true,
+      },
+    ],
+    [
       'module-resolver',
       {
         extensions: [
@@ -17,13 +27,13 @@ module.exports = {
         ],
         root: ['.'],
         alias: {
-          '@api': './src/api',
-          '@assets': './src/assets',
-          '@components': './src/components',
-          '@screens': './src/screens',
+          '@assets': './src/app/assets',
+          '@components': './src/app/components',
+          '@views': './src/app/views',
           '@storage': './src/storage',
-          '@common': './src/common',
+          '@common': './src/app/common',
           '@store': './src/store',
+          '@queryclient': './src/query-client',
         },
       },
     ],
