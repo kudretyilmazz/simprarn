@@ -1,5 +1,5 @@
 // Import Redux
-import {configureStore, combineReducers} from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import {
   persistReducer,
   persistStore,
@@ -11,28 +11,13 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-// Import Storage
-import {reduxStorage} from '@store/reduxStorage';
+// Import Config
+import {persistConfig} from '@config/store/store-config';
 
 // Import Reducers
-import theme from './slices/theme';
-import localization from './slices/localization';
-import user from './slices/user';
+import reducers from '@store/reducers';
 
-// Reducers
-const rootReducer = combineReducers({
-  theme: theme,
-  localization: localization,
-  user: user,
-});
-
-// Persist Config
-const persistConfig = {
-  key: 'root',
-  storage: reduxStorage,
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 // Store
 export const store = configureStore({

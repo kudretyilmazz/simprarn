@@ -4,13 +4,16 @@
     // ... other configs, if any
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/app/assets/*"],
-      "@components/*": ["src/app/components/*"],
-      "@screens/*": ["src/app/views/*"],
-      "@common/*": ["src/app/common/*"],
       "@storage/*": ["src/storage/*"],
       "@store/*": ["src/store/*"],
-      "@queryclient/*": ["src/query-client/*"]
+      "@queryclient/*": ["src/query-client/*"],
+      "@config/*": ["src/config/*"],
+      "@integrations/*": ["src/integrations/*"],
+      "@assets/*": ["src/app/assets/*"],
+      "@components/*": ["src/app/components/*"],
+      "@views/*": ["src/app/views/*"],
+      "@common/*": ["src/app/common/*"],
+      "@domain/*": ["src/domain/app/*"]
     }
   }
 }

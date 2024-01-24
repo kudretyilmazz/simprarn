@@ -7,11 +7,11 @@ import {store, persistor} from '@store/store';
 import {QueryClientProvider} from '@tanstack/react-query';
 import queryClient from '@queryclient/QueryClient';
 
-// Import React Navigation
+// Import Gesture Handler
 import 'react-native-gesture-handler';
 
 // Import App Screens
-import Views from './views';
+import Views from '@views/index';
 
 function App() {
   return (

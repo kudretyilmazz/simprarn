@@ -10,12 +10,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useAppSelector} from '@store/hooks';
 
 // Import Constants
-import {THEMES} from 'src/app/common/constants/theme/themes';
+import {THEMES} from '@common/constants/theme/themes';
 
 // Import Screens
-import LoginScreen from './Login/LoginScreen';
-import HomeScreen from 'src/app/views/Home/HomeScreen';
-import ProfileScreen from 'src/app/views/Profile/ProfileScreen';
+import LoginScreen from '@views/Login/LoginScreen';
+import HomeScreen from '@views/Home/HomeScreen';
+import ProfileScreen from '@views/Profile/ProfileScreen';
 
 // Navigator Type
 export type RootStackParamList = {
@@ -36,9 +36,15 @@ export default function AppScreens() {
 
   return (
     <NavigationContainer theme={navigationTheme}>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{gestureEnabled: true}}>
         {isLoggedIn === false ? (
-          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen
+            name="Login"
+            options={{
+              animationTypeForReplace: !isLoggedIn ? 'pop' : 'push',
+            }}
+            component={LoginScreen}
+          />
         ) : (
           <>
             <Stack.Screen name="Home" component={HomeScreen} />
