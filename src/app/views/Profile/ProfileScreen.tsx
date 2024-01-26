@@ -12,6 +12,7 @@ type TypeNavigation = NavigationProp<RootStackParamList>;
 export default function ProfileScreen() {
   // Variables
   const navigation = useNavigation<TypeNavigation>();
+
   return (
     <ScreenWrapper>
       <Button

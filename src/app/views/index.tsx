@@ -30,14 +30,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function AppScreens() {
   // Variables
   const currentTheme = useAppSelector(state => state.theme.theme);
-  const isLoggedIn = useAppSelector(state => state.user?.isLoggedIn);
+  const isLoggedIn = useAppSelector(state => state.user?.accessToken);
   const navigationTheme =
     currentTheme === THEMES.LIGHT ? DefaultTheme : DarkTheme;
 
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator screenOptions={{gestureEnabled: true}}>
-        {isLoggedIn === false ? (
+        {isLoggedIn === null ? (
           <Stack.Screen
             name="Login"
             options={{

@@ -4,22 +4,29 @@ import {StyleSheet} from 'react-native';
 // Import Theme Type
 import type {IStyleFileProp} from 'src/app/common/hooks/useStyles';
 
-const textInputStyles = ({colors}: IStyleFileProp) =>
+const inputStyles = ({}: IStyleFileProp) =>
   StyleSheet.create({
-    container: {
+    wrapper: {
+      alignSelf: 'stretch',
+      rowGap: 4,
+    },
+    inputContainer: {
+      height: 40,
       flexDirection: 'row',
-      borderRadius: 8,
     },
     input: {
+      height: 40,
       flex: 1,
       borderWidth: 1,
-      height: 40,
       borderRadius: 8,
-      borderColor: colors.primary,
-      fontSize: 16,
+      borderColor: '#666',
       paddingHorizontal: 8,
-      color: colors.secondary,
+    },
+    message: {
+      color: 'red',
+      paddingLeft: 4,
+      fontSize: 12,
     },
   });
 
-export default textInputStyles;
+export default inputStyles;

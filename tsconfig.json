@@ -1,7 +1,7 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
-    // ... other configs, if any
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@storage/*": ["src/storage/*"],
@@ -9,6 +9,7 @@
       "@queryclient/*": ["src/query-client/*"],
       "@config/*": ["src/config/*"],
       "@integrations/*": ["src/integrations/*"],
+      "@rest-client/*": ["src/rest-client/*"],
       "@assets/*": ["src/app/assets/*"],
       "@components/*": ["src/app/components/*"],
       "@views/*": ["src/app/views/*"],

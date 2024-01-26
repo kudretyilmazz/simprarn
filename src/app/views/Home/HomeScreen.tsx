@@ -4,7 +4,7 @@ import {useNavigation, NavigationProp} from '@react-navigation/native';
 // Import Store
 import {useAppDispatch, useAppSelector} from '@store/hooks';
 import {setTheme} from '@store/slices/theme';
-import {setLoginStatus} from '@store/slices/user';
+import {setTokens} from '@store/slices/user';
 
 // Import Components
 import View from 'src/app/components/view/View';
@@ -46,7 +46,17 @@ export default function HomeScreen() {
 
   const pushSettings = () => navigation.navigate('Profile');
 
-  const logout = () => setTimeout(() => dispatch(setLoginStatus(false)), 300);
+  const logout = () =>
+    setTimeout(
+      () =>
+        dispatch(
+          setTokens({
+            accessToken: null,
+            refreshToken: null,
+          }),
+        ),
+      300,
+    );
 
   return (
     <ScreenWrapper>

@@ -7,8 +7,8 @@ import type {IStyleFileProp} from 'src/app/common/hooks/useStyles';
 const buttonStyles = ({colors}: IStyleFileProp) =>
   StyleSheet.create({
     container: {
-      paddingHorizontal: 16,
-      paddingVertical: 8,
+      paddingHorizontal: 24,
+      paddingVertical: 12,
       backgroundColor: colors.primary,
       borderRadius: 16,
       textAlign: 'center',
@@ -16,7 +16,7 @@ const buttonStyles = ({colors}: IStyleFileProp) =>
     label: {
       fontWeight: '500',
       color: colors.white,
-      fontSize: 16,
+      fontSize: 18,
       textAlign: 'center',
     },
   });

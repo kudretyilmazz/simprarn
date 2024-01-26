@@ -32,6 +32,7 @@ module.exports = {
           '@config': './src/config',
           '@integrations': './src/integrations',
           '@store': './src/store',
+          '@rest-client': './src/rest-client',
           '@assets': './src/app/assets',
           '@components': './src/app/components',
           '@views': './src/app/views',

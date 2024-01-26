@@ -3,13 +3,15 @@ import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 
 export interface User {
-  isLoggedIn: boolean;
+  accessToken: string | null;
+  refreshToken: string | null;
   name?: string;
   surname?: string;
 }
 
 const initialState: User = {
-  isLoggedIn: false,
+  accessToken: null,
+  refreshToken: null,
   name: undefined,
   surname: undefined,
 };
@@ -22,12 +24,16 @@ export const userSlice = createSlice({
       state.name = action.payload.name;
       state.surname = action.payload.surname;
     },
-    setLoginStatus: (state, action: PayloadAction<boolean>) => {
-      state.isLoggedIn = action.payload;
+    setTokens: (
+      state,
+      action: PayloadAction<Record<string, string | null>>,
+    ) => {
+      state.accessToken = action.payload.accessToken;
+      state.refreshToken = action.payload.refreshToken;
     },
   },
 });
 
-export const {setUser, setLoginStatus} = userSlice.actions;
+export const {setUser, setTokens} = userSlice.actions;
 
 export default userSlice.reducer;

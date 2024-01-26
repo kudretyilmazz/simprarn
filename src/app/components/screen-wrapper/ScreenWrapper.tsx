@@ -15,7 +15,7 @@ import KeyboardShift from '@components/keyboard-shift/KeyboardShift';
 import View from '@components/view/View';
 
 // Import Assets
-import screenWrapperStyles from '@assets/styles/components/screen-wrapper/screenWrapperStyles';
+import screenWrapperStyles from '@assets/styles/components/screen-wrapper';
 
 interface IScreenWrapper extends ViewProps {
   withoutPadding?: boolean;
