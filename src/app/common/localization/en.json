@@ -8,5 +8,118 @@
       "LOGOUT": "Logout",
       "GO_BACK": "Go Back"
     }
+  },
+  "VALIDATION": {
+    "ERRORS": {
+      "invalid_type": "Expected {1}, received {2}",
+      "invalid_type_received_undefined": "Required",
+      "invalid_type_received_null": "Required",
+      "invalid_literal": "Invalid literal value, expected {1}",
+      "unrecognized_keys": "Unrecognized key(s) in object: {1}",
+      "invalid_union": "Invalid input",
+      "invalid_union_discriminator": "Invalid discriminator value. Expected {1}",
+      "invalid_enum_value": "Invalid enum value. Expected {1}, received '{2}'",
+      "invalid_arguments": "Invalid function arguments",
+      "invalid_return_type": "Invalid function return type",
+      "invalid_date": "Invalid date",
+      "custom": "Invalid input",
+      "invalid_intersection_types": "Intersection results could not be merged",
+      "not_multiple_of": "Number must be a multiple of {1}",
+      "not_finite": "Number must be finite",
+      "invalid_string": {
+        "email": "Invalid {1}",
+        "url": "Invalid {1}",
+        "uuid": "Invalid {1}",
+        "cuid": "Invalid {1}",
+        "regex": "Invalid",
+        "datetime": "Invalid {1}",
+        "startsWith": "Invalid input: must start with \"{1}\"",
+        "endsWith": "Invalid input: must end with \"{1}\""
+      },
+      "too_small": {
+        "array": {
+          "exact": "Array must contain exactly {1} element(s)",
+          "inclusive": "Array must contain at least {1} element(s)",
+          "not_inclusive": "Array must contain more than {1} element(s)"
+        },
+        "string": {
+          "exact": "String must contain exactly {1} character(s)",
+          "inclusive": "String must contain at least {1} character(s)",
+          "not_inclusive": "String must contain over {1} character(s)"
+        },
+        "number": {
+          "exact": "Number must be exactly {1}",
+          "inclusive": "Number must be greater than or equal to {1}",
+          "not_inclusive": "Number must be greater than {1}"
+        },
+        "set": {
+          "exact": "Invalid input",
+          "inclusive": "Invalid input",
+          "not_inclusive": "Invalid input"
+        },
+        "date": {
+          "exact": "Date must be exactly {1}",
+          "inclusive": "Date must be greater than or equal to {1}",
+          "not_inclusive": "Date must be greater than {1}"
+        }
+      },
+      "too_big": {
+        "array": {
+          "exact": "Array must contain exactly {1} element(s)",
+          "inclusive": "Array must contain at most {1} element(s)",
+          "not_inclusive": "Array must contain less than {1} element(s)"
+        },
+        "string": {
+          "exact": "String must contain exactly {1} character(s)",
+          "inclusive": "String must contain at most {1} character(s)",
+          "not_inclusive": "String must contain under {1} character(s)"
+        },
+        "number": {
+          "exact": "Number must be exactly {1}",
+          "inclusive": "Number must be less than or equal to {1}",
+          "not_inclusive": "Number must be less than {1}"
+        },
+        "set": {
+          "exact": "Invalid input",
+          "inclusive": "Invalid input",
+          "not_inclusive": "Invalid input"
+        },
+        "date": {
+          "exact": "Date must be exactly {1}",
+          "inclusive": "Date must be smaller than or equal to {1}",
+          "not_inclusive": "Date must be smaller than {1}"
+        }
+      }
+    },
+    "validations": {
+      "email": "email",
+      "url": "url",
+      "uuid": "uuid",
+      "cuid": "cuid",
+      "regex": "regex",
+      "datetime": "datetime"
+    },
+    "types": {
+      "function": "function",
+      "number": "number",
+      "string": "string",
+      "nan": "nan",
+      "integer": "integer",
+      "float": "float",
+      "boolean": "boolean",
+      "date": "date",
+      "bigint": "bigint",
+      "undefined": "undefined",
+      "symbol": "symbol",
+      "null": "null",
+      "array": "array",
+      "object": "object",
+      "unknown": "unknown",
+      "promise": "promise",
+      "void": "void",
+      "never": "never",
+      "map": "map",
+      "set": "set"
+    }
   }
 }

@@ -1,11 +1,15 @@
-'use client';
-
 // Import React
 import {useState, useCallback} from 'react';
+
+// Import Hooks
+import useLocalization from './useLocalization';
 
 // Import Zod
 import {z} from 'zod';
 import type {ZodSchema} from 'zod';
+
+// Import Locales
+import {CustomErrorMapGenerator} from '@common/utils/generate-zod-map';
 
 // Types
 export type FormControlType = {
@@ -32,9 +36,15 @@ function useForm(config: configType) {
   const [formData, setFormData] = useState(initialValues ?? {});
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
 
+  // Variables
+  const {translate} = useLocalization();
+  const errorGenerator = CustomErrorMapGenerator(translate);
+
   // Actions
   const handleSubmit = (handler: (values: z.infer<typeof schema>) => void) => {
-    const results = schema.safeParse(formData);
+    const results = schema.safeParse(formData, {
+      errorMap: errorGenerator,
+    });
 
     if (results.success) {
       handler(results.data);
@@ -66,7 +76,7 @@ function useForm(config: configType) {
       clearErrorByKey(key);
 
       if (onValuesChange) {
-        const newValues = onValuesChange(key, value, formData);
+        const newValues = onValuesChange(key, value, {...formData});
         setFormData(newValues);
       } else {
         setFormData(prev => ({...prev, [key]: value}));

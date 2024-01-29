@@ -8,5 +8,118 @@
       "LOGOUT": "Çıkış",
       "GO_BACK": "Geri Dön"
     }
+  },
+  "VALIDATION": {
+    "ERRORS": {
+      "invalid_type": "Beklenen {1}, alınan {2}",
+      "invalid_type_received_undefined": "Zorunlu",
+      "invalid_type_received_null": "Zorunlu",
+      "invalid_literal": "Geçersiz ilkel veri, beklenen {1}",
+      "unrecognized_keys": "Nesne içinde bilinmeyen anahtar(lar): {1}",
+      "invalid_union": "Geçersiz tip birleşimi",
+      "invalid_union_discriminator": "Geçersiz ayırıcı değer. Beklenen {1}",
+      "invalid_enum_value": "Geçersiz enum değeri. Beklenen {1}, alınan {2}",
+      "invalid_arguments": "Geçersiz fonksiyon argümanları",
+      "invalid_return_type": "Geçersiz fonksiyon dönüş değeri",
+      "invalid_date": "Geçersiz tarih",
+      "custom": "Geçersiz girdi",
+      "invalid_intersection_types": "Kesişim sonuçları birleştirilemedi",
+      "not_multiple_of": "{1} ve katları olmalı",
+      "not_finite": "Sayı sonlu olmalıdır",
+      "invalid_string": {
+        "email": "Geçersiz {1}",
+        "url": "Geçersiz {1}",
+        "uuid": "Geçersiz {1}",
+        "cuid": "Geçersiz {1}",
+        "regex": "Geçersiz",
+        "datetime": "Geçersiz {1}",
+        "startsWith": "Geçersiz girdi: \"{1}\" ile başlamalı",
+        "endsWith": "Geçersiz girdi: \"{1}\" ile bitmeli"
+      },
+      "too_small": {
+        "array": {
+          "exact": "Dizi tam olarak {1} adet veri içermeli",
+          "inclusive": "Dizi en az {1} adet veri içermeli",
+          "not_inclusive": "Dizi {1} den fazla veri içermeli"
+        },
+        "string": {
+          "exact": "Metin tam olarak {1} karakter içermeli",
+          "inclusive": "Metin en az {1} karakter içermeli",
+          "not_inclusive": "Metin {1} den fazla karakter içermeli"
+        },
+        "number": {
+          "exact": "Sayı tam olarak {1} olmalı",
+          "inclusive": "Sayı {1} veya daha büyük olmalı",
+          "not_inclusive": "Sayı {1} den daha büyük olmalı"
+        },
+        "set": {
+          "exact": "Geçersiz girdi",
+          "inclusive": "Geçersiz girdi",
+          "not_inclusive": "Geçersiz girdi"
+        },
+        "date": {
+          "exact": "Tarih tam olarak {1}",
+          "inclusive": "Tarih eşit veya daha büyük olmalı {1}",
+          "not_inclusive": "Tarih daha büyük olmalı{1}"
+        }
+      },
+      "too_big": {
+        "array": {
+          "exact": "Dizi tam olarak {1} adet veri içermeli",
+          "inclusive": "Dizi en fazla {1} adet veri içermeli",
+          "not_inclusive": "Dizi {1} den daha az veri içermeli"
+        },
+        "string": {
+          "exact": "Metin tam olarak {1} karakter içermeli",
+          "inclusive": "Metin en fazla {1} karakter içermeli",
+          "not_inclusive": "Metin {1} den daha az karakter içermeli"
+        },
+        "number": {
+          "exact": "Sayı tam olarak {1} olmalı",
+          "inclusive": "Sayı {1} veya daha küçük olmalı",
+          "not_inclusive": "Sayı {1} den daha küçük olmalı"
+        },
+        "set": {
+          "exact": "Geçersiz girdi",
+          "inclusive": "Geçersiz girdi",
+          "not_inclusive": "Geçersiz girdi"
+        },
+        "date": {
+          "exact": "Tarih tam olarak {1}",
+          "inclusive": "Tarih eşit veya daha küçük olmalı {1}",
+          "not_inclusive": "Tarih daha küçük olmalı {1}"
+        }
+      }
+    },
+    "validations": {
+      "email": "mail",
+      "url": "link",
+      "uuid": "uuid",
+      "cuid": "cuid",
+      "regex": "regex",
+      "datetime": "tarih ve zaman"
+    },
+    "types": {
+      "function": "fonksiyon",
+      "number": "sayı",
+      "string": "metin",
+      "nan": "NaN",
+      "integer": "tam sayı",
+      "float": "noktalı sayı",
+      "boolean": "boolean",
+      "date": "tarih",
+      "bigint": "büyük tam sayı",
+      "undefined": "tanımlanmamış",
+      "symbol": "sembol",
+      "null": "boş",
+      "array": "dizi",
+      "object": "nesne",
+      "unknown": "bilinmeyen",
+      "promise": "promise",
+      "void": "void",
+      "never": "never",
+      "map": "map",
+      "set": "set"
+    }
   }
 }
