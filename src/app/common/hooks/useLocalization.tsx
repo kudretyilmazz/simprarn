@@ -26,11 +26,11 @@ export default function useLocalization() {
 
     pathArr.forEach((pth: string, index) => {
       if (index === 0) {
-        result = dictionary[pth];
+        result = dictionary?.[pth];
         return;
       }
 
-      result = result[pth];
+      result = result?.[pth];
     });
 
     if (params) {

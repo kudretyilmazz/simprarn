@@ -38,12 +38,12 @@ function useForm(config: configType) {
 
   // Variables
   const {translate} = useLocalization();
-  const errorGenerator = CustomErrorMapGenerator(translate);
+  const errorMap = CustomErrorMapGenerator(translate);
 
   // Actions
   const handleSubmit = (handler: (values: z.infer<typeof schema>) => void) => {
     const results = schema.safeParse(formData, {
-      errorMap: errorGenerator,
+      errorMap: errorMap,
     });
 
     if (results.success) {
