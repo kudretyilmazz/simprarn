@@ -10,7 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useAppSelector} from '@store/hooks';
 
 // Import Constants
-import {THEMES} from '@common/constants/theme/themes';
+import {THEMES} from '@common/constants/themes';
 
 // Import Screens
 import LoginScreen from '@views/Login/LoginScreen';

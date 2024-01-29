@@ -3,7 +3,7 @@ import {useAppSelector, useAppDispatch} from '@store/hooks';
 import {setLocale} from '@store/slices/localization';
 
 // Import Constants
-import {LOCALES} from '@common/constants/localization/locales';
+import {LOCALES} from '@common/constants/locales';
 
 // Import Locales
 import tr from '../localization/tr.json';

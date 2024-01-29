@@ -16,8 +16,8 @@ import useLocalization from 'src/app/common/hooks/useLocalization';
 import useStyles from 'src/app/common/hooks/useStyles';
 
 // Import Constants
-import {LOCALES} from 'src/app/common/constants/localization/locales';
-import {THEMES} from 'src/app/common/constants/theme/themes';
+import {LOCALES} from '@common/constants/locales';
+import {THEMES} from '@common/constants/themes';
 
 // Import Assets
 import homeStyles from 'src/app/assets/styles/screens/home/homeStyles';

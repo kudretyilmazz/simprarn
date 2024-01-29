@@ -9,11 +9,9 @@ import {setTokens} from '@store/slices/user';
 import {useQuery, useMutation} from '@tanstack/react-query';
 
 export const useLogin = () => {
-  type TypeLoginPayload = {email: string; password: string};
-
   return useMutation({
     mutationKey: ['ACCOUNT.LOGIN'],
-    mutationFn: async (data: TypeLoginPayload) =>
+    mutationFn: async (data: unknown) =>
       RestClient.request({
         url: '/auth/login',
         method: 'POST',

@@ -21,15 +21,18 @@ export default function LoginScreen() {
   const styles = useStyles(loginStyles);
   const login = useLogin();
 
+  // Schema
+  const schema = z.object({
+    email: z.string().email(),
+    password: z.string().min(3),
+  });
+
   const {control, handleSubmit} = useForm({
-    schema: z.object({
-      email: z.string().email(),
-      password: z.string().min(3),
-    }),
+    schema,
   });
 
   // Functions
-  const handleLogin = (formData: any) => {
+  const handleLogin = (formData: unknown) => {
     login.mutate(formData);
   };
 

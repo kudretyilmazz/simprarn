@@ -9,7 +9,7 @@ import {colors} from 'src/app/common/design/colors';
 import type {TypeColors} from 'src/app/common/design/colors';
 
 // Import Constants
-import {THEMES} from 'src/app/common/constants/theme/themes';
+import {THEMES} from '@common/constants/themes';
 
 export interface IStyleFileProp {
   colors: Record<TypeColors, string>;

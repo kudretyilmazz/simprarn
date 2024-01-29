@@ -3,7 +3,8 @@
 // Import React
 import {useState, useCallback} from 'react';
 
-// Import Joi
+// Import Zod
+import {z} from 'zod';
 import type {ZodSchema} from 'zod';
 
 // Types
@@ -32,7 +33,7 @@ function useForm(config: configType) {
   const [errors, setErrors] = useState<Record<string, string | undefined>>({});
 
   // Actions
-  const handleSubmit = (handler: (values: unknown) => void) => {
+  const handleSubmit = (handler: (values: z.infer<typeof schema>) => void) => {
     const results = schema.safeParse(formData);
 
     if (results.success) {
